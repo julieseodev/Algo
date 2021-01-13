@@ -9,14 +9,15 @@ nums = [4, 1, 2, 8, 9, 10]
 // Output
 // 4
 
-class Solution {
-    solve(nums) {
-        nums.sort();
-        let gap = 0;
-        for (let i = 0; i < nums.length - 1; i++) {
-            let diff = Math.abs(nums[i] - nums[i + 1]);
-            gap = Math.max(diff, gap);
-        }
-        return gap;
+function largestGap(nums) {
+    nums.sort((a, b) => a - b);
+    // console.log(nums);
+    let maxGap = 0;
+    for (let i = 0; i < nums.length - 1; i++) {
+        let diff = Math.abs(nums[i] - nums[i + 1]);
+        maxGap = Math.max(diff, maxGap);
     }
+    return maxGap;
 }
+
+console.log(largestGap(nums));
