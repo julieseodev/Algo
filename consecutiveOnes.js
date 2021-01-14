@@ -8,3 +8,7 @@
 // nums = [0, 1, 1, 1, 2, 3]
 // Output
 // true
+
+function consecutiveOnes(nums) {
+    
+}
